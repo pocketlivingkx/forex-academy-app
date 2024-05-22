@@ -164,7 +164,7 @@ class LessonViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func separateTextByTags(_ text: String) -> [String] {
-        let pattern = "(<im>.*?</im>)|(<i>.*?</i>)|([^<]*(?:<(?!/?im>|/?i>)[^<]*)*)"
+        let pattern = "(<link>.*?</link>)|(<im>.*?</im>)|(<fr>.*?</fr>)|([^<]*(?:<(?!/?im>|/?fr>|/?link)[^<]*)*)"
         
         guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
             return []
@@ -268,7 +268,7 @@ class LessonViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var zxc = self.separateTextByTags(firstLesson ?? "")
         var answer = [String]()
         for xxx in zxc {
-            var gg = xxx.replacingOccurrences(of: "\r\n\r\n", with: "\n\n").replacingOccurrences(of: "<im>", with: "").replacingOccurrences(of: "</im>", with: "").replacingOccurrences(of: "<fr>", with: "").replacingOccurrences(of: "</fr>", with: "")
+            var gg = xxx.replacingOccurrences(of: "\r\n\r\n", with: "\n").replacingOccurrences(of: "<im>", with: "").replacingOccurrences(of: "</im>", with: "").replacingOccurrences(of: "<i>", with: "").replacingOccurrences(of: "</i>", with: "")
             answer.append(gg)
         }
         

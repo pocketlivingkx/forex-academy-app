@@ -59,7 +59,7 @@ class SingleLessonViewController: UIViewController, HeaderViewDelegate {
         
         let stackView = UIStackView()
              stackView.axis = .vertical
-             stackView.spacing = 10
+             stackView.spacing = 2
              stackView.alignment = .center
 
         contentView.addSubview(stackView)
@@ -70,6 +70,7 @@ class SingleLessonViewController: UIViewController, HeaderViewDelegate {
              }
         
         for element in arraz {
+            print("123",element)
             var views = UIView()
             
             if isValidURL(element) {
@@ -85,31 +86,75 @@ class SingleLessonViewController: UIViewController, HeaderViewDelegate {
                 imageView.clipsToBounds = true
                 let url = URL(string: element)
                 imageView.kf.indicatorType = .activity
-                imageView.kf.setImage(with: url)
-
-                views.snp.makeConstraints { make in
-                    make.width.equalToSuperview().multipliedBy(0.95)
-                    make.height.equalTo(views.snp.width).multipliedBy(0.7)
-                }
+                    //imageView.kf.setImage(with: url)
+                var coeff = 0.0
+                imageView.kf.setImage(with: url, completionHandler:  { result in
+                      switch result {
+                      case .success(let value):
+                          let size = value.image.size
+                          coeff = size.height / size.width
+                          print(size)
+                          views.snp.makeConstraints { make in
+                              make.width.equalToSuperview().multipliedBy(0.95)
+                              make.height.equalTo(views.snp.width).multipliedBy(coeff)
+                          }
+                          
+                          imageView.snp.makeConstraints { make in
+                              make.edges.equalToSuperview()
+                          }
+                          //completion(size)
+                      case .failure(let error):
+                          print("Error: \(error.localizedDescription)")
+                          //completion(nil)
+                      }
+                  })
                 
-                imageView.snp.makeConstraints { make in
-                    make.edges.equalToSuperview()
-                }
+               
             } else {
-              
-                    var withView = element.contains("<i>")
+                if element.contains("<link>")  {
+                    
+                    let attributedText = createAttributedText(from: element)
+
+                    
+                    let textView = UITextView()
+                    textView.isEditable = false
+                    textView.isScrollEnabled = true
+                    textView.attributedText = attributedText
+                    textView.dataDetectorTypes = .link
+                    textView.font = UIFont(name: "Raleway-Medium", size: 18.0)
+                    textView.isScrollEnabled = false
+                    textView.textAlignment = .center
+                    textView.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBlue]
+                    textView.backgroundColor = .clear
+                    stackView.addArrangedSubview(views)
+                    
+
+                    let textHeight = element.height(withConstrainedWidth: view.frame.width - 40 , font: UIFont(name: "Raleway-Medium", size: 18.0)!)
+                    views.snp.makeConstraints { make in
+                        make.width.equalToSuperview()
+                        make.height.greaterThanOrEqualTo(textHeight)
+
+                    }
+                    views.addSubview(textView)
+                    
+                    textView.snp.makeConstraints { make in
+                        make.edges.equalToSuperview()
+                    }
+                    
+                } else {
+                    var withView = element.contains("<fr>")
                     let label = UILabel()
-                var elements = element.replacingOccurrences(of: "<i>", with: "").replacingOccurrences(of: "</i>", with: "")
+                    var elements = element.replacingOccurrences(of: "<fr>", with: "").replacingOccurrences(of: "</fr>", with: "")
                     label.numberOfLines = 0
                     label.font = UIFont(name: "Raleway-Medium", size: 16.0)
                     label.textColor =  withView ? .white : UIColor(named: "TimesLabelLessonCellBackground")
-                views.layer.cornerRadius = 14
-                views.layer.masksToBounds = true
-                views.clipsToBounds = true
+                    views.layer.cornerRadius = 14
+                    views.layer.masksToBounds = true
+                    views.clipsToBounds = true
                     label.textAlignment = .left
                     label.numberOfLines = 0
                     label.text = elements
-                views.backgroundColor = withView ? UIColor(named: "LessonBG") : .clear
+                    views.backgroundColor = withView ? UIColor(named: "LessonBG") : .clear
                     let paragraphStyle = NSMutableParagraphStyle()
                     paragraphStyle.lineSpacing = 8
                     
@@ -133,7 +178,7 @@ class SingleLessonViewController: UIViewController, HeaderViewDelegate {
                     label.snp.makeConstraints { make in
                         make.edges.equalToSuperview().inset(10)
                     }
-                
+                }
             }
         }
         
@@ -154,6 +199,37 @@ class SingleLessonViewController: UIViewController, HeaderViewDelegate {
             make.centerX.equalToSuperview()
         }
 
+    }
+    
+    func createAttributedText(from text: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        // Регулярное выражение для поиска тега <link>
+        let linkPattern = "<link>(.*?)\\|\\((.*?)\\)</link>"
+        
+        // Найти и обработать все совпадения
+        if let regex = try? NSRegularExpression(pattern: linkPattern, options: []) {
+            let matches = regex.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
+            
+            for match in matches.reversed() {
+                let linkTextRange = match.range(at: 1)
+                let linkURLRange = match.range(at: 2)
+                
+                if let linkTextRange = Range(linkTextRange, in: text),
+                   let linkURLRange = Range(linkURLRange, in: text) {
+                    let linkText = String(text[linkTextRange])
+                    let linkURL = String(text[linkURLRange])
+                    
+                    let url = URL(string: linkURL)!
+                    let attributedLinkText = NSMutableAttributedString(string: linkText)
+                    attributedLinkText.addAttribute(.link, value: url, range: NSRange(location: 0, length: linkText.utf16.count))
+                    
+                    attributedString.replaceCharacters(in: match.range, with: attributedLinkText)
+                }
+            }
+        }
+        
+        return attributedString
     }
     
     @objc func readLesson() {
@@ -200,7 +276,7 @@ class SingleLessonViewController: UIViewController, HeaderViewDelegate {
         let matches = regex.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
         
         let attributedString = NSMutableAttributedString(string: text)
-        let customFont = UIFont(name: "Raleway-Bold", size: 20.0) ?? UIFont.boldSystemFont(ofSize: 16.0)
+        let customFont = UIFont(name: "Raleway-Bold", size: 16.0) ?? UIFont.boldSystemFont(ofSize: 16.0)
         
         var offset = 0
         for match in matches {
