@@ -7,489 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8EDE96DF-5373-4DEB-8B44-C81C45061C5E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/UIView+Ext.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "hasTopSafeArea"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CD37391D-3197-4EA0-86D1-F6B776941C9D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/TabBarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3F5743B8-25D7-45CE-A9FA-4C002FA8CCFE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/LessonViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3F5743B8-25D7-45CE-A9FA-4C002FA8CCFE - 5be694f7a2df1865"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.LessonViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1460">
-               </Location>
-               <Location
-                  uuid = "3F5743B8-25D7-45CE-A9FA-4C002FA8CCFE - 9fb7a655e21a15a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (SnapKit.ConstraintMaker) -&gt; () in forex.LessonViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9828B5FE-8161-41FE-B994-68566DBD1F85"
+            uuid = "02DC0872-1AFA-4B46-AB52-9C70241B3629"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "forex/EndPoints.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "fetchDataFromAPI(endpoint:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9828B5FE-8161-41FE-B994-68566DBD1F85 - 56c02860eb3e0e8e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static forex.NetworkLayer.fetchDataFromAPI(endpoint: forex.APIEndpoint, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/EndPoints.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "652">
-               </Location>
-               <Location
-                  uuid = "9828B5FE-8161-41FE-B994-68566DBD1F85 - 56c02860eb3e0e8e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static forex.NetworkLayer.fetchDataFromAPI(endpoint: forex.APIEndpoint, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/EndPoints.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "608">
-               </Location>
-               <Location
-                  uuid = "9828B5FE-8161-41FE-B994-68566DBD1F85 - 56c02860eb3e0e8e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static forex.NetworkLayer.fetchDataFromAPI(endpoint: forex.APIEndpoint, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/EndPoints.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "640">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C45366EE-92D3-4030-9959-53E164D62972"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/LessonViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "fetchUser()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C45366EE-92D3-4030-9959-53E164D62972 - 4240102de424525c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in forex.LessonViewController.fetchLesson() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2296">
-               </Location>
-               <Location
-                  uuid = "C45366EE-92D3-4030-9959-53E164D62972 - 4240102de424525c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in forex.LessonViewController.fetchLesson() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "2648">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4274E760-6789-4AA9-9559-79E91A2C954C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/LessonViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "fetchUser()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4274E760-6789-4AA9-9559-79E91A2C954C - 550bf5c04abe8190"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in forex.LessonViewController.fetchUser() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "3224">
-               </Location>
-               <Location
-                  uuid = "4274E760-6789-4AA9-9559-79E91A2C954C - 550bf5c04abe8190"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in forex.LessonViewController.fetchUser() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "2176">
-               </Location>
-               <Location
-                  uuid = "4274E760-6789-4AA9-9559-79E91A2C954C - f5c2db38ecc2c80e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in forex.LessonViewController.fetchUser() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex-academy-app/forex/forex/LessonViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "2176">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E6F30962-D8A6-4DF8-B1EB-86832385D279"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/EndPoints.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "fetchDataFromAPI(endpoint:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E6F30962-D8A6-4DF8-B1EB-86832385D279 - 56c02860eb3e0855"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static forex.NetworkLayer.fetchDataFromAPI(endpoint: forex.APIEndpoint, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/EndPoints.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "596">
-               </Location>
-               <Location
-                  uuid = "E6F30962-D8A6-4DF8-B1EB-86832385D279 - 56c02860eb3e0f97"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static forex.NetworkLayer.fetchDataFromAPI(endpoint: forex.APIEndpoint, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/EndPoints.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "564">
-               </Location>
-               <Location
-                  uuid = "E6F30962-D8A6-4DF8-B1EB-86832385D279 - 56c02860eb3e08be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static forex.NetworkLayer.fetchDataFromAPI(endpoint: forex.APIEndpoint, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/EndPoints.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "532">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7321B4AB-809D-45F6-8EB3-4FDC7514189E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/SingleLessonViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
-            landmarkName = "readLesson()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2C2CCB4F-AFD0-4DF7-B4E6-7E908437F166"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/LessonViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C2C6293A-9146-4AF7-ABF0-CAC0643E9CC2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/QuizViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "updateProgress()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C2C6293A-9146-4AF7-ABF0-CAC0643E9CC2 - ee9c745ab29ae568"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.QuizViewController.updateProgress() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/QuizViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "344">
-               </Location>
-               <Location
-                  uuid = "C2C6293A-9146-4AF7-ABF0-CAC0643E9CC2 - ee9c745ab29aeb7e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.QuizViewController.updateProgress() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/QuizViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "1604">
-               </Location>
-               <Location
-                  uuid = "C2C6293A-9146-4AF7-ABF0-CAC0643E9CC2 - ee9c745ab29aeb7e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.QuizViewController.updateProgress() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/QuizViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "1644">
-               </Location>
-               <Location
-                  uuid = "C2C6293A-9146-4AF7-ABF0-CAC0643E9CC2 - ee9c745ab29aebfa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.QuizViewController.updateProgress() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex/forex/QuizViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "1644">
-               </Location>
-               <Location
-                  uuid = "C2C6293A-9146-4AF7-ABF0-CAC0643E9CC2 - 4bc8c9cb48376261"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.QuizViewController.updateProgress() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex-academy-app/forex/forex/QuizViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "1644">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E608AD24-8F3E-417C-BB85-3214AE5551D4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/LessonViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E449F66-EF6E-43A9-9055-4F0058B25E63"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/QuizAnswerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "813D32E7-B14C-4DD3-9FB9-55F5C784E701"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "forex/EndPoints.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "fetchDataFromAPI(endpoint:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -497,65 +23,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2C40D350-9253-4E80-B5BF-B149BB361F3D"
-            shouldBeEnabled = "Yes"
+            uuid = "86365BD6-59D7-4556-9200-DF7A5FCE87FC"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "forex/QuizAnswerViewController.swift"
+            filePath = "forex/EndPoints.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "fetchDataFromAPI(endpoint:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2755CC89-121A-46ED-9E4E-A6BDDBD5FC51"
+            uuid = "3C24BC7E-90E7-4672-B734-ED8909BB4C6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forex/BroukViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "fetchBrouk()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBD2004B-6A06-409C-9891-6F427FC626F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "forex/BroukViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "fetchBrouk()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D7609DF-D0CA-4B77-8C93-96821CEAF7D5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "forex/QuizAnswerViewController.swift"
+            filePath = "forex/BroukViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "confirm()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2755CC89-121A-46ED-9E4E-A6BDDBD5FC51 - 9aa10015729a83df"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "forex.QuizAnswerViewController.confirm() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex-academy-app/forex/forex/QuizAnswerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "1164">
-               </Location>
-               <Location
-                  uuid = "2755CC89-121A-46ED-9E4E-A6BDDBD5FC51 - 33eafcc853e107c6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in forex.QuizAnswerViewController.confirm() -&gt; ()"
-                  moduleName = "forex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/msklv/Desktop/forex-academy-app/forex/forex/QuizAnswerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "fetchBrouk()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

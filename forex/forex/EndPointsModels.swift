@@ -82,8 +82,8 @@ struct AllQuizModel: Codable {
 
 
 struct BrokersModel: Codable {
-    let count: Int?
-    let results: [ResultBrouk]?
+    let brokerInfo: String?
+    let data: [ResultBrouk]?
 }
 
 // MARK: - Result
@@ -93,11 +93,13 @@ struct ResultBrouk: Codable {
     let minDeposit: Int?
     let link: String?
     let brokerImage: String?
+    let description: String?
 
     enum CodingKeys: String, CodingKey {
         case brokerName = "broker_name"
         case minDeposit = "min_deposit"
         case link
         case brokerImage = "broker_image"
+        case description = "description"
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20BDE992C77C76E002A1D96 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20BDE972C77C76E002A1D96 /* FAQTableViewCell.swift */; };
+		B20BDE9A2C77C76E002A1D96 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B20BDE982C77C76E002A1D96 /* FAQTableViewCell.xib */; };
 		B27877D02BF12400000A912F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27877CF2BF12400000A912F /* AppDelegate.swift */; };
 		B27877D22BF12400000A912F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27877D12BF12400000A912F /* SceneDelegate.swift */; };
 		B27877D42BF12400000A912F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27877D32BF12400000A912F /* ViewController.swift */; };
@@ -88,6 +90,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B20BDE972C77C76E002A1D96 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		B20BDE982C77C76E002A1D96 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		B27877CC2BF12400000A912F /* forex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27877CF2BF12400000A912F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B27877D12BF12400000A912F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				B27878352BF92B81000A912F /* QuizAnswerViewController.swift */,
 				B27878312BF7F4D6000A912F /* LoaderView.swift */,
 				B27878222BF149C0000A912F /* SettingsViewController.swift */,
+				B20BDE972C77C76E002A1D96 /* FAQTableViewCell.swift */,
+				B20BDE982C77C76E002A1D96 /* FAQTableViewCell.xib */,
 				B278782A2BF2110F000A912F /* UserDefaultsManager.swift */,
 				B27878792BFBEC41000A912F /* GoogleService-Info.plist */,
 				B27878202BF14989000A912F /* TabBarViewController.swift */,
@@ -383,6 +389,7 @@
 				B27878022BF12949000A912F /* Raleway-Italic-VariableFont_wght.ttf in Resources */,
 				B278780B2BF12949000A912F /* Raleway-Regular.ttf in Resources */,
 				B27878112BF12949000A912F /* Raleway-LightItalic.ttf in Resources */,
+				B20BDE9A2C77C76E002A1D96 /* FAQTableViewCell.xib in Resources */,
 				B27878092BF12949000A912F /* Raleway-ExtraBold.ttf in Resources */,
 				B278780F2BF12949000A912F /* Raleway-Black.ttf in Resources */,
 				B27878032BF12949000A912F /* Raleway-BoldItalic.ttf in Resources */,
@@ -406,6 +413,7 @@
 				B278783F2BFBE126000A912F /* SettingView.swift in Sources */,
 				B27877D42BF12400000A912F /* ViewController.swift in Sources */,
 				B278781B2BF13D04000A912F /* OrangeButton.swift in Sources */,
+				B20BDE992C77C76E002A1D96 /* FAQTableViewCell.swift in Sources */,
 				B27877D02BF12400000A912F /* AppDelegate.swift in Sources */,
 				B27878232BF149C0000A912F /* SettingsViewController.swift in Sources */,
 				B278782D2BF692AC000A912F /* SingleLessonViewController.swift in Sources */,
@@ -576,7 +584,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = forex44;
+				PRODUCT_BUNDLE_IDENTIFIER = forex444;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -603,7 +611,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = forex44;
+				PRODUCT_BUNDLE_IDENTIFIER = forex444;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

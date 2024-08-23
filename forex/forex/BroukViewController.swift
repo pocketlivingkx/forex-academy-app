@@ -7,11 +7,17 @@
 
 import UIKit
 import FirebaseAnalytics
+import Kingfisher
 
-class BroukViewController: UIViewController {
+class BroukViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+
     
     let headerView = HeaderView(frame: .zero, headerText: "Top 3 brokers", isBackNeeded: false)
     var broukes = [ResultBrouk]()
+    var tv = UITableView()
+    var desctiptionL = UITextView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,73 +30,68 @@ class BroukViewController: UIViewController {
             make.left.right.top.equalToSuperview()
         }
         
+        view.addSubview(tv)
+        view.addSubview(desctiptionL)
+
+        desctiptionL.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-20)
+            make.height.equalTo(160)
+            make.left.equalToSuperview().offset(30)
+            make.right.equalToSuperview().offset(-30)
+        }
+        
+        tv.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(30)
+            make.right.equalToSuperview().offset(-30)
+            make.top.equalTo(headerView.snp.bottom).offset(30)
+            make.bottom.equalTo(desctiptionL.snp.top).offset(-30)
+        }
+        
+        tv.delegate = self
+        tv.dataSource = self
+        let nib = UINib(nibName: "FAQTableViewCell", bundle: nil)
+        tv.backgroundColor = .clear
+        tv.register(nib, forCellReuseIdentifier: "FAQTableViewCell")
+        tv.separatorStyle = .none
+        tv.rowHeight = UITableView.automaticDimension
+        
         
         fetchBrouk()
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        broukes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FAQTableViewCell", for: indexPath) as! FAQTableViewCell
+        cell.dep.text = "Min deposit " + "\(broukes[indexPath.row].minDeposit ?? 0)" + " $"
+        cell.iiimage.kf.indicatorType = .activity
+        cell.namee.text = broukes[indexPath.row].brokerName ?? ""
+        
+        cell.descr.text = ".qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa"
+        
+        let url = URL(string: broukes[indexPath.row].brokerImage ?? "")
+
+
+       // cell.iiimage.kf.setImage(with: broukes[indexPath.row].link ?? "")
+        cell.iiimage.kf.setImage(with: url)
+       // cell.qwe.setImage(UIImage(named: cellData.isExpanded ? "more" : "more2"), for: .normal)
+        return cell
+    }
+    
+   
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Analytics.logEvent("BrokersScreen", parameters: nil)
     }
-    
-    func createBroukView() {
-        var sv = UIStackView()
-        sv.axis = .vertical
-        view.addSubview(sv)
-        sv.backgroundColor = .clear
-        sv.spacing = 16
-        
-        sv.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.height.equalTo(212)
-            make.width.equalTo(360)
-        }
-        
-        var firstView = UIView()
-        firstView.backgroundColor = .clear
-        
-        var ffirstView = UIView()
-        ffirstView.backgroundColor = .clear
-        
-        var fffirstView = UIView()
-        fffirstView.backgroundColor = .clear
-  
-        var viewBroukOne = BroukView(frame: .zero, name: broukes[0].brokerName ?? "", linkString:  broukes[0].link ?? "" , link:  broukes[0].brokerImage ?? "", depo: "\(broukes[0].minDeposit ?? 0)")
-        var viewBroukTwo = BroukView(frame: .zero, name: broukes[1].brokerName ?? "", linkString:  broukes[1].link ?? "" , link:  broukes[1].brokerImage ?? "", depo: "\(broukes[1].minDeposit ?? 0)")
-        var viewBroukThree = BroukView(frame: .zero, name: broukes[2].brokerName ?? "", linkString:  broukes[2].link ?? "" , link:  broukes[2].brokerImage ?? "", depo: "\(broukes[2].minDeposit ?? 0)")
-        
-        sv.addArrangedSubview(firstView)
-        sv.addArrangedSubview(ffirstView)
-        sv.addArrangedSubview(fffirstView)
-
-        firstView.addSubview(viewBroukOne)
-        
-        viewBroukOne.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-            make.height.equalTo(60)
-            make.width.equalToSuperview()
-        }
-        
-        ffirstView.addSubview(viewBroukTwo)
-        
-        viewBroukTwo.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-
-            make.height.equalTo(60)
-            make.width.equalToSuperview()
-        }
-        
-        fffirstView.addSubview(viewBroukThree)
-        
-        viewBroukThree.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-
-            make.height.equalTo(60)
-            make.width.equalToSuperview()
-        }
-    }
-    
-    
     
     
     
@@ -110,10 +111,10 @@ class BroukViewController: UIViewController {
                         print(json,jsonData)
                         
                         if let lessonsModel: BrokersModel = try? JSONDecoder().decode(BrokersModel.self, from: jsonData) {
-                            self.broukes = lessonsModel.results ?? [ResultBrouk]()
+                            self.broukes = lessonsModel.data ?? [ResultBrouk]()
                             print(self.broukes)
                             DispatchQueue.main.async {
-                                self.createBroukView()
+                                self.tv.reloadData()
                             }
                         }
                     }
