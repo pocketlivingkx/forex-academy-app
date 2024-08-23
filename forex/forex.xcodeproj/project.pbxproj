@@ -14,8 +14,6 @@
 		B27877D42BF12400000A912F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27877D32BF12400000A912F /* ViewController.swift */; };
 		B27877D92BF12404000A912F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27877D82BF12404000A912F /* Assets.xcassets */; };
 		B27877DC2BF12404000A912F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27877DA2BF12404000A912F /* LaunchScreen.storyboard */; };
-		B27877E52BF12552000A912F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B27877E42BF12552000A912F /* SnapKit */; };
-		B27877E72BF12552000A912F /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B27877E62BF12552000A912F /* SnapKit-Dynamic */; };
 		B27877E92BF12568000A912F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27877E82BF12568000A912F /* HeaderView.swift */; };
 		B27878022BF12949000A912F /* Raleway-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B27877EB2BF12948000A912F /* Raleway-Italic-VariableFont_wght.ttf */; };
 		B27878032BF12949000A912F /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B27877ED2BF12948000A912F /* Raleway-BoldItalic.ttf */; };
@@ -87,6 +85,7 @@
 		B27878762BFBE7E9000A912F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B27878752BFBE7E9000A912F /* FirebaseStorageCombine-Community */; };
 		B27878782BFBE7E9000A912F /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = B27878772BFBE7E9000A912F /* FirebaseVertexAI-Preview */; };
 		B278787A2BFBEC41000A912F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B27878792BFBEC41000A912F /* GoogleService-Info.plist */; };
+		FA5C30B02C7873CC00466742 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA5C30AF2C7873CC00466742 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,12 +160,11 @@
 				B278785E2BFBE7E9000A912F /* FirebaseFirestoreSwift in Frameworks */,
 				B278785A2BFBE7E9000A912F /* FirebaseFirestore in Frameworks */,
 				B27878602BFBE7E9000A912F /* FirebaseFunctions in Frameworks */,
-				B27877E52BF12552000A912F /* SnapKit in Frameworks */,
 				B27878462BFBE7E9000A912F /* FirebaseAnalyticsSwift in Frameworks */,
 				B27878782BFBE7E9000A912F /* FirebaseVertexAI-Preview in Frameworks */,
 				B27878422BFBE7E9000A912F /* FirebaseAnalytics in Frameworks */,
-				B27877E72BF12552000A912F /* SnapKit-Dynamic in Frameworks */,
 				B27878502BFBE7E9000A912F /* FirebaseAuthCombine-Community in Frameworks */,
+				FA5C30B02C7873CC00466742 /* SnapKit in Frameworks */,
 				B278784E2BFBE7E9000A912F /* FirebaseAuth in Frameworks */,
 				B27878622BFBE7E9000A912F /* FirebaseFunctionsCombine-Community in Frameworks */,
 				B27878522BFBE7E9000A912F /* FirebaseCrashlytics in Frameworks */,
@@ -290,8 +288,6 @@
 			);
 			name = forex;
 			packageProductDependencies = (
-				B27877E42BF12552000A912F /* SnapKit */,
-				B27877E62BF12552000A912F /* SnapKit-Dynamic */,
 				B278782F2BF697E1000A912F /* Kingfisher */,
 				B27878382BFA04E4000A912F /* AlertKit */,
 				B27878412BFBE7E9000A912F /* FirebaseAnalytics */,
@@ -322,6 +318,7 @@
 				B27878732BFBE7E9000A912F /* FirebaseStorage */,
 				B27878752BFBE7E9000A912F /* FirebaseStorageCombine-Community */,
 				B27878772BFBE7E9000A912F /* FirebaseVertexAI-Preview */,
+				FA5C30AF2C7873CC00466742 /* SnapKit */,
 			);
 			productName = forex;
 			productReference = B27877CC2BF12400000A912F /* forex.app */;
@@ -352,10 +349,10 @@
 			);
 			mainGroup = B27877C32BF12400000A912F;
 			packageReferences = (
-				B27877E32BF12551000A912F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B278782E2BF697E1000A912F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B27878372BFA04E4000A912F /* XCRemoteSwiftPackageReference "AlertKit" */,
 				B27878402BFBE7E8000A912F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FA5C30AE2C7873CC00466742 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = B27877CD2BF12400000A912F /* Products */;
 			projectDirPath = "";
@@ -643,14 +640,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B27877E32BF12551000A912F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
 		B278782E2BF697E1000A912F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -675,19 +664,17 @@
 				minimumVersion = 10.26.0;
 			};
 		};
+		FA5C30AE2C7873CC00466742 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B27877E42BF12552000A912F /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B27877E32BF12551000A912F /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		B27877E62BF12552000A912F /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B27877E32BF12551000A912F /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
 		B278782F2BF697E1000A912F /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B278782E2BF697E1000A912F /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -837,6 +824,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B27878402BFBE7E8000A912F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseVertexAI-Preview";
+		};
+		FA5C30AF2C7873CC00466742 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5C30AE2C7873CC00466742 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

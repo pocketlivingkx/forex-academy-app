@@ -82,7 +82,7 @@ struct AllQuizModel: Codable {
 
 
 struct BrokersModel: Codable {
-    let brokerInfo: String?
+    let broker_info: String?
     let data: [ResultBrouk]?
 }
 

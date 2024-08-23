@@ -14,10 +14,11 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
     
 
     
-    let headerView = HeaderView(frame: .zero, headerText: "Top 3 brokers", isBackNeeded: false)
+    let headerView = HeaderView(frame: .zero, headerText: "Top brokers", isBackNeeded: false)
     var broukes = [ResultBrouk]()
     var tv = UITableView()
     var desctiptionL = UITextView()
+    var descrpResult = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +33,14 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         view.addSubview(tv)
         view.addSubview(desctiptionL)
-
+        desctiptionL.backgroundColor = .clear
+        desctiptionL.textColor = .white
+        
+        desctiptionL.font = UIFont(name: "Raleway-Regular", size: 18.0)
+        desctiptionL.textAlignment = .center
         desctiptionL.snp.makeConstraints { make in
             make.bottom.equalToSuperview().offset(-20)
-            make.height.equalTo(160)
+            make.height.equalTo(200)
             make.left.equalToSuperview().offset(30)
             make.right.equalToSuperview().offset(-30)
         }
@@ -55,7 +60,7 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
         tv.separatorStyle = .none
         tv.rowHeight = UITableView.automaticDimension
         
-        
+        tv.backgroundColor = .clear
         fetchBrouk()
     }
     
@@ -66,11 +71,12 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FAQTableViewCell", for: indexPath) as! FAQTableViewCell
+        
+        cell.contentView.backgroundColor = .clear
         cell.dep.text = "Min deposit " + "\(broukes[indexPath.row].minDeposit ?? 0)" + " $"
         cell.iiimage.kf.indicatorType = .activity
         cell.namee.text = broukes[indexPath.row].brokerName ?? ""
-        
-        cell.descr.text = ".qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa.qwe.setImage(UIImage(named: cellDa"
+        cell.descr.text = broukes[indexPath.row].description ?? ""
         
         let url = URL(string: broukes[indexPath.row].brokerImage ?? "")
 
@@ -81,19 +87,24 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let url = URL(string: "\(broukes[indexPath.row].link ?? "")") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    
+    func updateDescrpText() {
+        desctiptionL.text = descrpResult
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Analytics.logEvent("BrokersScreen", parameters: nil)
     }
-    
-    
     
     func fetchBrouk() {
         NetworkLayer.fetchDataFromAPI(endpoint: .brok) { data, respons, error in
@@ -112,16 +123,16 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
                         
                         if let lessonsModel: BrokersModel = try? JSONDecoder().decode(BrokersModel.self, from: jsonData) {
                             self.broukes = lessonsModel.data ?? [ResultBrouk]()
+                            self.descrpResult = lessonsModel.broker_info ?? ""
                             print(self.broukes)
                             DispatchQueue.main.async {
                                 self.tv.reloadData()
+                                self.updateDescrpText()
                             }
                         }
                     }
                 } catch {
                         print("Error decoding JSON:", error)
-                        
-                   
                 }
             }
         }
