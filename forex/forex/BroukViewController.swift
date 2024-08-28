@@ -39,17 +39,20 @@ class BroukViewController: UIViewController, UITableViewDataSource, UITableViewD
         desctiptionL.font = UIFont(name: "Raleway-Regular", size: 18.0)
         desctiptionL.textAlignment = .center
         desctiptionL.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-20)
-            make.height.equalTo(200)
+            make.bottom.equalToSuperview().offset(-((UIView.hasTopSafeArea ? 104 : 84) + 4))
+            make.height.equalTo(100)
             make.left.equalToSuperview().offset(30)
             make.right.equalToSuperview().offset(-30)
         }
         
         tv.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(30)
-            make.right.equalToSuperview().offset(-30)
-            make.top.equalTo(headerView.snp.bottom).offset(30)
-            make.bottom.equalTo(desctiptionL.snp.top).offset(-30)
+            //make.left.equalToSuperview().offset(30)
+            //make.right.equalToSuperview().offset(-30)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.92)
+            make.height.equalTo(tv.snp.width)
+           // make.top.equalTo(headerView.snp.bottom).offset(30)
+            make.bottom.equalTo(desctiptionL.snp.top).offset(-20)
         }
         
         tv.delegate = self
